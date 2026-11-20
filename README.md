@@ -4,6 +4,12 @@ Global Solution 2026.2 · Application Development · Desafio CitizenTech
 
 > *Tecnologia que cuida de quem cuidou da gente.*
 
+## Grupo
+
+- Bento Donato Garcia — RM561621
+- Enzo Ribeiro Domingues Piazentin — RM564216
+- Guilherme Domingues Califoni — RM565157
+
 ## Problema, público-alvo, objetivo e ODS
 
 - **Problema:** solidão, golpes e exclusão digital atingem pessoas com 60 anos ou mais. O Brasil tem 32 milhões de idosos (Censo 2022), e 5,6 milhões deles moram sozinhos. Hoje esses casos ficam espalhados e o poder público não sabe onde agir primeiro.
