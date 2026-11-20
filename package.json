@@ -1,0 +1,22 @@
+
+{
+  "name": "elo60-ocorrencias",
+  "version": "1.0.0",
+  "description": "Elo 60+ | Protótipo do Painel Elo 60+: registro de ocorrências com pessoas idosas por bairro e indicadores de risco (Global Solution 2026.2 - Application Development)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/seed.js",
+    "test": "node scripts/testes.js"
+  },
+  "keywords": ["citizentech", "idosos", "ods3", "ods10", "express", "mongodb"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0"
+  }
+}

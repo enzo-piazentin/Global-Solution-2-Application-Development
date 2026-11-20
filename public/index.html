@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar ocorrência | Elo 60+</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="/"><span class="marca-elo">Elo</span> 60+</a>
+    <nav>
+      <a href="/">Registrar ocorrência</a>
+      <a href="/painel">Painel</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Ninguém precisa envelhecer sozinho.</h1>
+      <p class="sub">O Elo 60+ registra situações de risco com pessoas idosas em cada bairro e transforma esses registros em alertas para a prefeitura e os CRAS.</p>
+
+      <div class="intro-grade">
+        <article>
+          <h3>Problema</h3>
+          <p>Solidão, golpes e exclusão digital atingem quem tem 60 anos ou mais. São 32 milhões de idosos no Brasil e 5,6 milhões moram sozinhos.</p>
+        </article>
+        <article>
+          <h3>Público-alvo</h3>
+          <p>Pessoas idosas e suas famílias. Quem usa o painel são as equipes da prefeitura e dos CRAS.</p>
+        </article>
+        <article>
+          <h3>Objetivo</h3>
+          <p>Mostrar onde estão os casos e quais bairros precisam de ação primeiro, com uma regra simples e transparente.</p>
+        </article>
+        <article>
+          <h3>ODS</h3>
+          <p><strong>ODS 3</strong> Saúde e bem-estar · <strong>ODS 10</strong> Redução das desigualdades · <strong>ODS 11</strong> Cidades e comunidades sustentáveis</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cartao">
+      <h2>Registrar ocorrência</h2>
+      <p class="aviso-lgpd">Registro anônimo: não informe nome, telefone ou endereço da pessoa idosa (LGPD).</p>
+
+      <form method="POST" action="/ocorrencias" class="formulario">
+        <label>Tipo de ocorrência
+          <select name="tipo" required>
+            <option value="">Selecione…</option>
+            <option value="golpe">Tentativa de golpe</option>
+            <option value="isolamento">Idoso sozinho / sem check-in</option>
+            <option value="saude_calor">Saúde e onda de calor</option>
+            <option value="falta_servico">Falta de serviço ou atividade</option>
+          </select>
+        </label>
+
+        <label>Bairro
+          <select name="bairro" required>
+            <option value="">Selecione…</option>
+            <option>Butantã</option>
+            <option>Capão Redondo</option>
+            <option>Centro</option>
+            <option>Itaquera</option>
+            <option>Mooca</option>
+            <option>Pinheiros</option>
+            <option>Santana</option>
+            <option>São Miguel Paulista</option>
+          </select>
+        </label>
+
+        <fieldset>
+          <legend>Prioridade</legend>
+          <label class="opcao"><input type="radio" name="prioridade" value="alta" required> Alta</label>
+          <label class="opcao"><input type="radio" name="prioridade" value="media"> Média</label>
+          <label class="opcao"><input type="radio" name="prioridade" value="baixa"> Baixa</label>
+        </fieldset>
+
+        <label>Idade da pessoa idosa
+          <input type="number" name="idade" placeholder="60 ou mais" required>
+        </label>
+
+        <label class="largo">Descrição
+          <textarea name="descricao" rows="4" maxlength="500" placeholder="Ex.: recebeu mensagem de falso parente pedindo Pix de R$ 1.500." required></textarea>
+        </label>
+
+        <button class="botao largo" type="submit">Registrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    Elo 60+ · Tecnologia que cuida de quem cuidou da gente · ODS 3, 10 e 11
+  </footer>
+</body>
+</html>

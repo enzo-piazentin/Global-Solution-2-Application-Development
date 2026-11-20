@@ -1,0 +1,140 @@
+/* Elo 60+: azul-marinho e verde-água (segurança e cuidado), coral para alertas.
+   Fonte grande e alto contraste, pensando em quem tem 60+. */
+:root {
+  --marinho: #0E1B2C;
+  --marinho-2: #17283F;
+  --agua: #2EC4B6;
+  --agua-escura: #1B8F85;
+  --coral: #FF6B5B;
+  --ambar: #F5A524;
+  --fundo: #F4F7FA;
+  --texto: #14202E;
+  --texto-2: #4A5A6C;
+  --borda: #D9E1EA;
+  --raio: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+main { max-width: 1100px; margin: 0 auto; padding: 24px 20px 48px; }
+
+a { color: var(--agua-escura); }
+
+/* Topo */
+.topo {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  padding: 14px 24px; background: var(--marinho); color: #fff;
+}
+.marca { color: #fff; text-decoration: none; font-size: 1.5rem; font-weight: 800; }
+.marca-elo { color: var(--agua); }
+.topo nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 600; }
+.topo nav a:hover { color: var(--agua); }
+
+/* Introdução */
+.intro {
+  background: linear-gradient(135deg, var(--marinho), var(--marinho-2));
+  color: #fff; border-radius: var(--raio); padding: 32px; margin-bottom: 24px;
+}
+.intro h1 { margin: 0 0 8px; font-size: 2.1rem; }
+.intro .sub { color: #C9D6E4; margin-top: 0; }
+.intro-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+.intro-grade article { background: rgba(255,255,255,.06); border: 1px solid rgba(46,196,182,.35); border-radius: 12px; padding: 16px; }
+.intro-grade h3 { margin: 0 0 6px; color: var(--agua); font-size: 1rem; text-transform: uppercase; letter-spacing: .04em; }
+.intro-grade p { margin: 0; font-size: .95rem; color: #E6EDF5; }
+
+/* Cartões */
+.cartao {
+  background: #fff; border: 1px solid var(--borda); border-radius: var(--raio);
+  padding: 24px; margin-bottom: 24px;
+}
+.cartao h2 { margin-top: 0; }
+
+/* Formulário */
+.formulario { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.formulario .largo { grid-column: 1 / -1; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; }
+select, input[type="number"], textarea {
+  font: inherit; padding: 12px; border: 2px solid var(--borda); border-radius: 10px; background: #fff;
+}
+select:focus, input:focus, textarea:focus { outline: none; border-color: var(--agua); }
+fieldset { border: 2px solid var(--borda); border-radius: 10px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+legend { font-weight: 600; padding: 0 6px; }
+.opcao { flex-direction: row; align-items: center; gap: 8px; font-weight: 500; }
+.opcao input { width: 20px; height: 20px; }
+.aviso-lgpd { background: #E8F8F6; border-left: 4px solid var(--agua); padding: 10px 14px; border-radius: 6px; }
+
+/* Botões */
+.botao {
+  display: inline-block; font: inherit; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center;
+  background: var(--agua); color: var(--marinho); border: none; border-radius: 10px; padding: 12px 22px;
+}
+.botao:hover { background: var(--agua-escura); color: #fff; }
+.botao.secundario { background: transparent; color: var(--marinho); border: 2px solid var(--marinho); }
+.acoes { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+
+/* Mensagens */
+.mensagem.ok { border-left: 8px solid var(--agua); }
+.mensagem.erro { border-left: 8px solid var(--coral); }
+.mensagem ul { color: #B3261E; font-weight: 600; }
+.centro { text-align: center; border-left-width: 1px !important; }
+.centro .acoes { justify-content: center; }
+.codigo { font-size: 5rem; font-weight: 900; color: var(--coral); margin: 0; line-height: 1; }
+
+/* Painel */
+.cabecalho-painel { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+.cabecalho-painel h1 { margin: 0; }
+.sub { color: var(--texto-2); margin-top: 4px; }
+
+.indicadores { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.kpi { background: var(--marinho); color: #fff; border-radius: var(--raio); padding: 20px; display: flex; flex-direction: column; }
+.kpi-rotulo { color: #C9D6E4; font-size: .95rem; }
+.kpi-valor { font-size: 2.6rem; font-weight: 800; color: var(--agua); }
+.kpi.alerta .kpi-valor { color: var(--coral); }
+
+.grade-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+.grade-2 .cartao { margin-bottom: 24px; }
+
+.barra-linha { display: grid; grid-template-columns: 190px 1fr 90px; align-items: center; gap: 10px; margin: 10px 0; }
+.barra-rotulo { font-size: .95rem; }
+.barra-trilho { background: #E9EEF4; border-radius: 6px; height: 14px; overflow: hidden; }
+.barra { display: block; height: 100%; background: var(--agua); border-radius: 6px; }
+.barra.golpe, .barra.alta { background: var(--coral); }
+.barra.saude_calor, .barra.media { background: var(--ambar); }
+.barra-valor { text-align: right; font-weight: 700; }
+.barra-valor small { color: var(--texto-2); font-weight: 500; }
+
+.regra { color: var(--texto-2); font-size: .95rem; }
+
+.tabela-rolagem { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--borda); vertical-align: top; }
+th { background: #EEF3F8; font-weight: 700; }
+td.descricao { max-width: 340px; }
+td.vazio { text-align: center; color: var(--texto-2); padding: 24px; }
+small.aviso { color: #9A6100; }
+
+.selo { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: .85rem; font-weight: 700; white-space: nowrap; }
+.selo.alto, .selo.p-alta { background: #FFE3DF; color: #B3261E; }
+.selo.atencao, .selo.p-media { background: #FFF1D6; color: #8A5300; }
+.selo.normal, .selo.p-baixa { background: #DDF5F2; color: #10665E; }
+.selo.decisao { background: var(--marinho); color: var(--agua); padding: 10px 16px; font-size: .95rem; }
+
+.filtros { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 8px; }
+.contagem { color: var(--texto-2); }
+
+.rodape { text-align: center; color: var(--texto-2); font-size: .9rem; padding: 24px; }
+
+@media (max-width: 700px) {
+  .formulario { grid-template-columns: 1fr; }
+  .barra-linha { grid-template-columns: 1fr 70px; }
+  .barra-rotulo { grid-column: 1 / -1; }
+}
