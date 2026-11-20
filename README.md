@@ -10,6 +10,10 @@ Global Solution 2026.2 · Application Development · Desafio CitizenTech
 - Enzo Ribeiro Domingues Piazentin — RM564216
 - Guilherme Domingues Califoni — RM565157
 
+## Vídeo pitch
+
+https://youtu.be/OBM96FcN_E8
+
 ## Problema, público-alvo, objetivo e ODS
 
 - **Problema:** solidão, golpes e exclusão digital atingem pessoas com 60 anos ou mais. O Brasil tem 32 milhões de idosos (Censo 2022), e 5,6 milhões deles moram sozinhos. Hoje esses casos ficam espalhados e o poder público não sabe onde agir primeiro.
@@ -25,7 +29,11 @@ HTML, CSS, JavaScript, Node.js, Express e MongoDB (driver oficial `mongodb`).
 
 ## Como executar
 
-Pré-requisitos: **Node.js 18+** e **MongoDB** rodando localmente (ou uma URI do MongoDB Atlas).
+Pré-requisitos: **Node.js 18+** e **MongoDB** rodando localmente na porta 27017 (ou uma URI do MongoDB Atlas).
+
+> Se aparecer `connect ECONNREFUSED 127.0.0.1:27017`, o MongoDB está desligado. No Windows, rode
+> `Start-Service MongoDB` (PowerShell como administrador) ou inicie manualmente em outra janela:
+> `mongod --dbpath C:\data\db` (crie a pasta antes com `mkdir C:\data\db`).
 
 ```bash
 npm install          # instala express e mongodb
@@ -85,6 +93,7 @@ Os dados de `npm run seed` são **ilustrativos (sintéticos)** e não representa
 elo60-ocorrencias/
 ├── server.js              # Express: rotas GET/POST, 404 e erro 500
 ├── package.json
+├── README.md
 ├── public/
 │   ├── index.html         # introdução + formulário
 │   └── style.css
@@ -99,7 +108,3 @@ elo60-ocorrencias/
     ├── dados-sinteticos.js
     └── testes.js
 ```
-
-## Vídeo pitch
-
-Link: _(colar aqui o link do YouTube)_
